@@ -72,7 +72,7 @@ class GroqService:
     def __init__(self, api_key: str):
         # A injeção de dependência da chave permite testes mais fáceis e desacoplamento
         self.client = Groq(api_key=api_key)
-        self.model = "llama3-8b-8192" # Modelo padrão, pode ser parametrizado
+        self.model = "llama-3.1-8b-instant"
 
     def generate_response(self, messages: List[Dict[str, str]]) -> str:
         """Envia as mensagens para a LLM e retorna a resposta gerada."""
